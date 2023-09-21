@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\MASTER.ncd
+OUTFILE=C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\MASTER.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO
+LICENSE=WebPack
+USER_INFO=212579383_0_0_753

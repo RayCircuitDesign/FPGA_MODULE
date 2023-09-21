@@ -1,0 +1,550 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: MASTER.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MASTER.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MASTER"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : MASTER
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\TIEMPO_CLK.v" into library work
+Parsing module <TIEMPO_CLK>.
+Analyzing Verilog file "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\KEY_PAD_MATRICIAL_2.v" into library work
+Parsing module <KEY_PAD_MATRICIAL_2>.
+Analyzing Verilog file "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\MASTER.v" into library work
+Parsing module <MASTER>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MASTER>.
+
+Elaborating module <TIEMPO_CLK>.
+
+Elaborating module <KEY_PAD_MATRICIAL_2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MASTER>.
+    Related source file is "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\MASTER.v".
+    Summary:
+	no macro.
+Unit <MASTER> synthesized.
+
+Synthesizing Unit <TIEMPO_CLK>.
+    Related source file is "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\TIEMPO_CLK.v".
+        p = 28'b0000000000111101000010010000
+        p1 = 28'b0001001100010010110100000000
+        p2 = 28'b0000001001100010010110100000
+    Found 28-bit register for signal <r1>.
+    Found 28-bit register for signal <r2>.
+    Found 3-bit register for signal <s>.
+    Found 28-bit register for signal <r>.
+    Found 28-bit adder for signal <r[27]_GND_2_o_add_1_OUT> created at line 34.
+    Found 28-bit adder for signal <r1[27]_GND_2_o_add_2_OUT> created at line 35.
+    Found 28-bit adder for signal <r2[27]_GND_2_o_add_3_OUT> created at line 36.
+    Found 28-bit comparator greater for signal <n0003> created at line 38
+    Found 28-bit comparator greater for signal <r[27]_GND_2_o_LessThan_7_o> created at line 40
+    Found 28-bit comparator greater for signal <n0007> created at line 42
+    Found 28-bit comparator greater for signal <r1[27]_GND_2_o_LessThan_10_o> created at line 44
+    Found 28-bit comparator greater for signal <n0011> created at line 46
+    Found 28-bit comparator greater for signal <r2[27]_GND_2_o_LessThan_13_o> created at line 48
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  87 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <TIEMPO_CLK> synthesized.
+
+Synthesizing Unit <KEY_PAD_MATRICIAL_2>.
+    Related source file is "C:\Users\d\OneDrive\Escritorio\todo\clase c3-2023\microcontroles\XILIX\MODULOS_DE_RESPALDO\KEY_PAD_MATRICIAL_2.v".
+WARNING:Xst:647 - Input <s<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <contador_key>.
+    Found 4-bit register for signal <key_out>.
+    Found 2-bit adder for signal <contador_key[1]_GND_3_o_add_2_OUT> created at line 49.
+    Found 4x4-bit Read Only RAM for signal <contador_key[1]_PWR_3_o_wide_mux_1_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <KEY_PAD_MATRICIAL_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 1
+ 28-bit adder                                          : 3
+# Registers                                            : 6
+ 2-bit register                                        : 1
+ 28-bit register                                       : 3
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 6
+ 28-bit comparator greater                             : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <s_1> of sequential type is unconnected in block <temporizacion>.
+WARNING:Xst:2677 - Node <s_2> of sequential type is unconnected in block <temporizacion>.
+
+Synthesizing (advanced) Unit <KEY_PAD_MATRICIAL_2>.
+The following registers are absorbed into counter <contador_key>: 1 register on signal <contador_key>.
+INFO:Xst:3231 - The small RAM <Mram_contador_key[1]_PWR_3_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contador_key>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <KEY_PAD_MATRICIAL_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TIEMPO_CLK>.
+The following registers are absorbed into counter <r1>: 1 register on signal <r1>.
+The following registers are absorbed into counter <r2>: 1 register on signal <r2>.
+The following registers are absorbed into counter <r>: 1 register on signal <r>.
+Unit <TIEMPO_CLK> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 28-bit up counter                                     : 3
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Comparators                                          : 6
+ 28-bit comparator greater                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MASTER> ...
+
+Optimizing unit <KEY_PAD_MATRICIAL_2> ...
+
+Optimizing unit <TIEMPO_CLK> ...
+WARNING:Xst:2677 - Node <temporizacion/r2_27> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_26> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_25> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_24> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_23> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_22> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_21> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_20> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_19> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_18> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_17> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_16> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_15> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_14> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_13> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_12> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_11> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_10> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_9> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_8> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_7> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_6> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_5> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_4> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_3> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_2> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_1> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r2_0> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_27> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_26> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_25> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_24> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_23> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_22> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_21> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_20> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_19> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_18> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_17> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_16> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_15> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_14> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_13> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_12> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_11> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_10> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_9> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_8> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_7> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_6> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_5> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_4> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_3> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_2> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_1> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/r1_0> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/s_2> of sequential type is unconnected in block <MASTER>.
+WARNING:Xst:2677 - Node <temporizacion/s_1> of sequential type is unconnected in block <MASTER>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MASTER, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MASTER.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 163
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 27
+#      LUT2                        : 34
+#      LUT3                        : 2
+#      LUT4                        : 3
+#      LUT5                        : 17
+#      LUT6                        : 9
+#      MUXCY                       : 38
+#      VCC                         : 1
+#      XORCY                       : 28
+# FlipFlops/Latches                : 35
+#      FD                          : 35
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 4
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              35  out of  11440     0%  
+ Number of Slice LUTs:                   95  out of   5720     1%  
+    Number used as Logic:                95  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     96
+   Number with an unused Flip Flop:      61  out of     96    63%  
+   Number with an unused LUT:             1  out of     96     1%  
+   Number of fully used LUT-FF pairs:    34  out of     96    35%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    200     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                   | Load  |
+-----------------------------------+-----------------------------------------+-------+
+temporizacion/s_0                  | NONE(teclado_matricial_2/contador_key_1)| 6     |
+clk                                | BUFGP                                   | 29    |
+-----------------------------------+-----------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.693ns (Maximum Frequency: 270.758MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 6.006ns
+   Maximum combinational path delay: 6.888ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'temporizacion/s_0'
+  Clock period: 2.078ns (frequency: 481.325MHz)
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Delay:               2.078ns (Levels of Logic = 1)
+  Source:            teclado_matricial_2/contador_key_0 (FF)
+  Destination:       teclado_matricial_2/contador_key_0 (FF)
+  Source Clock:      temporizacion/s_0 rising
+  Destination Clock: temporizacion/s_0 rising
+
+  Data Path: teclado_matricial_2/contador_key_0 to teclado_matricial_2/contador_key_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   0.744  teclado_matricial_2/contador_key_0 (teclado_matricial_2/contador_key_0)
+     INV:I->O              1   0.206   0.579  teclado_matricial_2/Mcount_contador_key_xor<0>11_INV_0 (teclado_matricial_2/Result<0>)
+     FD:D                      0.102          teclado_matricial_2/contador_key_0
+    ----------------------------------------
+    Total                      2.078ns (0.755ns logic, 1.323ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.693ns (frequency: 270.758MHz)
+  Total number of paths / destination ports: 1823 / 29
+-------------------------------------------------------------------------
+Delay:               3.693ns (Levels of Logic = 7)
+  Source:            temporizacion/r_5 (FF)
+  Destination:       temporizacion/r_27 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: temporizacion/r_5 to temporizacion/r_27
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   1.059  temporizacion/r_5 (temporizacion/r_5)
+     LUT5:I0->O            1   0.203   0.000  temporizacion/Mcompar_n0003_lut<1> (temporizacion/Mcompar_n0003_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  temporizacion/Mcompar_n0003_cy<1> (temporizacion/Mcompar_n0003_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  temporizacion/Mcompar_n0003_cy<2> (temporizacion/Mcompar_n0003_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  temporizacion/Mcompar_n0003_cy<3> (temporizacion/Mcompar_n0003_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  temporizacion/Mcompar_n0003_cy<4> (temporizacion/Mcompar_n0003_cy<4>)
+     MUXCY:CI->O          28   0.213   1.235  temporizacion/Mcompar_n0003_cy<5> (temporizacion/Mcompar_n0003_cy<5>)
+     LUT2:I1->O            1   0.205   0.000  temporizacion/r_27_rstpot (temporizacion/r_27_rstpot)
+     FD:D                      0.102          temporizacion/r_27
+    ----------------------------------------
+    Total                      3.693ns (1.399ns logic, 2.294ns route)
+                                       (37.9% logic, 62.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temporizacion/s_0'
+  Total number of paths / destination ports: 31 / 8
+-------------------------------------------------------------------------
+Offset:              6.006ns (Levels of Logic = 3)
+  Source:            teclado_matricial_2/key_out_3 (FF)
+  Destination:       ROM<1> (PAD)
+  Source Clock:      temporizacion/s_0 rising
+
+  Data Path: teclado_matricial_2/key_out_3 to ROM<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.058  teclado_matricial_2/key_out_3 (teclado_matricial_2/key_out_3)
+     LUT6:I3->O            1   0.205   0.944  teclado_matricial_2/ROM<3>1 (teclado_matricial_2/ROM<3>)
+     LUT6:I0->O            1   0.203   0.579  teclado_matricial_2/ROM<3>3 (ROM_1_OBUF)
+     OBUF:I->O                 2.571          ROM_1_OBUF (ROM<1>)
+    ----------------------------------------
+    Total                      6.006ns (3.426ns logic, 2.580ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 4
+-------------------------------------------------------------------------
+Delay:               6.888ns (Levels of Logic = 4)
+  Source:            key_in<0> (PAD)
+  Destination:       ROM<1> (PAD)
+
+  Data Path: key_in<0> to ROM<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.167  key_in_0_IBUF (key_in_0_IBUF)
+     LUT6:I0->O            1   0.203   0.944  teclado_matricial_2/ROM<3>1 (teclado_matricial_2/ROM<3>)
+     LUT6:I0->O            1   0.203   0.579  teclado_matricial_2/ROM<3>3 (ROM_1_OBUF)
+     OBUF:I->O                 2.571          ROM_1_OBUF (ROM<1>)
+    ----------------------------------------
+    Total                      6.888ns (4.199ns logic, 2.689ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.693|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock temporizacion/s_0
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+temporizacion/s_0|    2.078|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.39 secs
+ 
+--> 
+
+Total memory usage is 4486976 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   61 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

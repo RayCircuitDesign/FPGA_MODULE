@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Sep 20 00:40:57 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "key_in<0>" LOCATE = SITE "H18" LEVEL 1;
+COMP "key_in<1>" LOCATE = SITE "J18" LEVEL 1;
+COMP "key_in<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "key_in<3>" LOCATE = SITE "L16" LEVEL 1;
+COMP "ROM<0>" LOCATE = SITE "T18" LEVEL 1;
+COMP "ROM<1>" LOCATE = SITE "T17" LEVEL 1;
+COMP "ROM<2>" LOCATE = SITE "U18" LEVEL 1;
+COMP "ROM<3>" LOCATE = SITE "U17" LEVEL 1;
+COMP "key_out<0>" LOCATE = SITE "L15" LEVEL 1;
+COMP "key_out<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "key_out<2>" LOCATE = SITE "J16" LEVEL 1;
+COMP "key_out<3>" LOCATE = SITE "H17" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+

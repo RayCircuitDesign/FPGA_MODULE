@@ -1,0 +1,3 @@
+verilog work "TIEMPO_CLK.v"
+verilog work "KEY_PAD_MATRICIAL_2.v"
+verilog work "MASTER.v"
